@@ -1,0 +1,16 @@
+pluto.maxfuse=polycc --maxfuse
+pluto.tiling.maxfuse=polycc --tile --maxfuse
+pluto.tiling=polycc --tile
+pluto.unroll4=polycc --unroll --ufactor 4
+pluto.tiling.unroll=polycc --tile --unroll
+# pluto.l2tile=polycc --tile --second-level-tile
+# pluto.l2tile.unroll=polycc --tile --second-level-tile --unroll
+pocc.smartfuse=pocc --pluto-fuse smartfuse --quiet
+pocc.regtiling8=pocc --register-tiling --punroll-size 8 --pragmatizer --quiet
+pocc.regtiling16=pocc --register-tiling --punroll-size 16 --pragmatizer --quiet
+pocc.tiling32=pocc --pluto-tile --pluto-prevector --vectorizer --quiet
+pocc.tiling32.maxfuse=pocc --pluto-tile --pluto-fuse maxfuse --pluto-prevector --vectorizer --quiet
+pocc.unroll8=pocc --punroll --punroll-size 8 --pragmatizer --quiet
+pocc.tiling32.unroll8=pocc --pluto-tile --punroll --punroll-size 8 --pragmatizer --quiet
+pocc.tiling32.regtiling=pocc --pluto-tile --register-tiling --pluto-prevector --vectorizer --quiet
+pocc.vectorization=pocc --pluto-prevector --vectorizer --quiet

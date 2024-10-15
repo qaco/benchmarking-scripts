@@ -1,0 +1,18 @@
+# Beware: pocc unrolling is broken !
+pluto.noopt=/home/derumigny/INRIA/pluto-git/polycc
+pluto.maxfuse=/home/derumigny/INRIA/pluto-git/polycc --maxfuse
+pluto.tiling.maxfuse=/home/derumigny/INRIA/pluto-git/polycc --tile --maxfuse
+pluto.tiling=/home/derumigny/INRIA/pluto-git/polycc --tile
+pluto.unroll4=/home/derumigny/INRIA/pluto-git/polycc --unroll --ufactor 4
+pluto.unroll8=/home/derumigny/INRIA/pluto-git/polycc --unroll --ufactor 8
+pluto.unroll16=/home/derumigny/INRIA/pluto-git/polycc --unroll --ufactor 16
+pluto.tiling.unroll=/home/derumigny/INRIA/pluto-git/polycc --tile --unroll
+pluto.l2tile=/home/derumigny/INRIA/pluto-git/polycc --tile --second-level-tile
+pluto.l2tile.unroll=/home/derumigny/INRIA/pluto-git/polycc --tile --second-level-tile --unroll
+pocc.smartfuse=/home/derumigny/INRIA/pocc-devel/bin/pocc --pluto-fuse smartfuse --quiet
+pocc.regtiling8=/home/derumigny/INRIA/pocc-devel/bin/pocc --register-tiling --punroll-size 8 --pragmatizer --quiet
+pocc.regtiling16=/home/derumigny/INRIA/pocc-devel/bin/pocc --register-tiling --punroll-size 16 --pragmatizer --quiet
+pocc.tiling32=/home/derumigny/INRIA/pocc-devel/bin/pocc --pluto-tile --pluto-prevector --vectorizer --quiet
+pocc.tiling32.maxfuse=/home/derumigny/INRIA/pocc-devel/bin/pocc --pluto-tile --pluto-fuse maxfuse --pluto-prevector --vectorizer --quiet
+pocc.tiling32.regtiling=/home/derumigny/INRIA/pocc-devel/bin/pocc --pluto-tile --register-tiling --pluto-prevector --vectorizer --quiet
+pocc.vectorization=/home/derumigny/INRIA/pocc-devel/bin/pocc --pluto-prevector --vectorizer --quiet

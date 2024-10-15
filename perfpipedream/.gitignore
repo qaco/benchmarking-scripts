@@ -1,0 +1,8 @@
+CMakeCache.txt
+CMakeFiles
+cmake_install.cmake
+*.so
+*.a
+Makefile
+perf-pipedream-example
+install_manifest.txt

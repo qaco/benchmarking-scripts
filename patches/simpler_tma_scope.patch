@@ -1,0 +1,23 @@
+diff --git a/src/perf.cpp b/src/perf.cpp
+index 05a03ac..fe0dd73 100644
+--- a/src/perf.cpp
++++ b/src/perf.cpp
+@@ -72,8 +72,9 @@ static void onBeforeTarget(void *ctx, void **data) {
+         std::string tma_output_file = getenv("TMA_OUTPUT_FILE");
+         std::string tma_level = getenv("TMA_LEVEL");
+         if (getenv("TMA_TOPLEV") == NULL) {
+-          vfork_child_run({"/usr/bin/perf", "stat", "-M", tma_level, "-p",
+-                           std::to_string(pid), "-o", tma_output_file});
++          vfork_child_run({"/usr/bin/perf", "stat", "-p",
++              std::to_string(pid), "-o", tma_output_file});
++              // std::to_string(pid), "-o", tma_output_file});
+         } else {
+           std::string tma_toplev = getenv("TMA_TOPLEV");
+           vfork_child_run({"/usr/bin/python", tma_toplev + "/toplev.py",
+@@ -167,4 +168,4 @@ DR_EXPORT void dr_client_main(client_id_t id, int argc, const char *argv[]) {
+   // Configure function wrapping (Improve performance)
+   drwrap_set_global_flags(static_cast<drwrap_global_flags_t>(
+       DRWRAP_NO_FRILLS | DRWRAP_FAST_CLEANCALLS));
+-}
+\ No newline at end of file
++}

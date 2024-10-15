@@ -1,0 +1,11 @@
+__*
+venv
+.params
+.srcfilename
+.unroll
+.outfilename
+*.csv
+*.cloog
+.regtile
+
+gus

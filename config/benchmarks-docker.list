@@ -1,0 +1,31 @@
+# find polybench-gus/ -ls | grep "\.c$" | awk '{print $NF, $NF}' | awk '{sub(/^.*\//, "", $2); print}' | awk '{sub(/\.c/, "", $2); print}' | awk '{ $2 = "kernel_" $2; print }'
+polybench/stencils/jacobi-1d/jacobi-1d.c kernel_jacobi-1d
+polybench/stencils/heat-3d/heat-3d.c kernel_heat-3d 
+polybench/stencils/seidel-2d/seidel-2d.c kernel_seidel-2d
+polybench/stencils/jacobi-2d/jacobi-2d.c kernel_jacobi-2d
+polybench/stencils/adi/adi.c kernel_adi
+polybench/stencils/fdtd-2d/fdtd-2d.c kernel_fdtd-2d
+polybench/datamining/correlation/correlation.c kernel_correlation
+polybench/datamining/covariance/covariance.c kernel_covariance
+# polybench/medley/nussinov/nussinov.c kernel_nussinov
+polybench/medley/floyd-warshall/floyd-warshall.c kernel_floyd-warshall
+# polybench/medley/deriche/deriche.c kernel_deriche
+polybench/linear-algebra/solvers/lu/lu.c kernel_lu
+polybench/linear-algebra/solvers/durbin/durbin.c kernel_durbin
+polybench/linear-algebra/solvers/gramschmidt/gramschmidt.c kernel_gramschmidt
+polybench/linear-algebra/solvers/trisolv/trisolv.c kernel_trisolv
+polybench/linear-algebra/solvers/ludcmp/ludcmp.c kernel_ludcmp
+polybench/linear-algebra/solvers/cholesky/cholesky.c kernel_cholesky
+polybench/linear-algebra/blas/gemm/gemm.c kernel_gemm
+polybench/linear-algebra/blas/gesummv/gesummv.c kernel_gesummv
+polybench/linear-algebra/blas/syr2k/syr2k.c kernel_syr2k
+polybench/linear-algebra/blas/syrk/syrk.c kernel_syrk
+polybench/linear-algebra/blas/symm/symm.c kernel_symm
+polybench/linear-algebra/blas/trmm/trmm.c kernel_trmm
+polybench/linear-algebra/blas/gemver/gemver.c kernel_gemver
+polybench/linear-algebra/kernels/bicg/bicg.c kernel_bicg
+polybench/linear-algebra/kernels/3mm/3mm.c kernel_3mm
+polybench/linear-algebra/kernels/mvt/mvt.c kernel_mvt
+polybench/linear-algebra/kernels/atax/atax.c kernel_atax
+polybench/linear-algebra/kernels/doitgen/doitgen.c kernel_doitgen
+polybench/linear-algebra/kernels/2mm/2mm.c kernel_2mm

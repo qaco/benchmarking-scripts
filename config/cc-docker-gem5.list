@@ -1,0 +1,6 @@
+gcc.O3.SSE.SKYLAKE.GEM5=gcc -O3 -g -march=x86-64-v2 -mtune=skylake -DPOLYBENCH_GEM5 -DGEM5 -DSMALL_DATASET -fno-inline 
+#gcc.O3.SSE.SKYLAKE.PAPI=gcc -O3 -g -march=x86-64-v2 -mtune=skylake -DPOLYBENCH_PAPI -DGEM5
+gcc.O3.SSE.SKYLAKE.PAPI=gcc -O3 -g -march=x86-64-v2 -mtune=skylake -DPOLYBENCH_PAPI -Iperfpipedream/lib -DSMALL_DATASET -fno-inline 
+gcc.O3.SSE.SKYLAKE.GUS=gcc -O3 -g -march=x86-64-v2 -mtune=skylake -DSMALL_DATASET -fno-inline 
+# aarch64-linux-gnu-gcc.perf=aarch64-linux-gnu-gcc -O3 -g -static -march=armv8-a -mcpu=cortex-a72 -DPOLYBENCH_PIPEDREAM -DPOLYBENCH_PAPI -Iperfpipedream/lib
+# aarch64-linux-gnu-gcc.gus=aarch64-linux-gnu-gcc -O3 -g -static -march=armv8-a -mcpu=cortex-a72 -Iperfpipedream/lib
