@@ -14,7 +14,7 @@ def main():
     parser = argparse.ArgumentParser(
         description="Produces perf reports on each input binaries.",
         epilog = '''Example:
-        ./run_perf.py --binaries __inputs__/2mm.gcc.O3 --target-dir __outputs__ --tma-scope-install-dir ~/src/projects/tma-scope/ --perf-core 1 --verbose --very-verbose
+        ./run_perf.py --binaries-dir __inputs__ --target-dir __outputs__ --tma-scope-install-dir ~/src/projects/tma-scope/ --perf-core 1 --verbose --very-verbose
         '''
     )
     group_binaries = parser.add_mutually_exclusive_group(required=True)

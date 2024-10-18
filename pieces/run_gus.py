@@ -9,8 +9,6 @@ import concurrent.futures
 
 from helpers import print_warning, run_command
 
-DYNAMORIO_DIR_NAME = "DynamoRIO-Linux-10.93.20000"
-
 def gus_it(binary,args) -> Tuple[bool,str]:
     load_from_cache = args.use_cache or args.use_cache_only
     skip_if_no_in_cache = args.use_cache_only
@@ -148,8 +146,12 @@ def main():
             parser.error(f"{args.source_conf} does not exist.")
     # Grab the names contained in the directory
     elif args.binaries_dir:
-        if os.path.exists(args.source_dir):
-            binaries = os.listdir(args.source_dir)
+        if os.path.exists(args.binaries_dir):
+            binaries_tmp = os.listdir(args.binaries_dir)
+            binaries = []
+            for b in binaries_tmp:
+                binary = f"{args.binaries_dir}/{b}"
+                binaries.append(binary)
         else:
             parser.error(f"{args.source_dir} does not exist.")
     # Grab the names provided by the command line
